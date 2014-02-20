@@ -14,14 +14,17 @@
       <form id="factorial-calc">
         <div class="form-group">
           <label for="number">Enter a number to factorialize: </label>
-          <input id="number" type="number">
+          <input id="number" type="">
         </div>
 
         <button type="submit" class="btn">Find out!</button>
       </form>
 
       <div id="result">
-        <p>The factorial of <span id="originalNumber"></span>! is <span id='resultNumber'></span>.</p>
+        <p>The factorial of <span class="originalNumber"></span>! is <span class='resultNumber'></span>.</p>
+      </div>
+      <div id="error">
+        <p><span class='resultError'></span>.</p>
       </div>
     </div>
   </body>

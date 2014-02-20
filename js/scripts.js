@@ -12,3 +12,23 @@ var factorial = function(number) {
   }
   
 };
+
+$(document).ready(function() {
+  $('form#factorial-calc').submit(function(event) {
+    var originalNumber = parseInt($('input#number').val());
+    var result = factorial(originalNumber);
+
+    if (originalNumber < 0 || originalNumber % 1 != 0){
+      $(".resultError").text(result);
+      $('#error').show();
+      $('#result').hide();
+    } else {
+      $('.originalNumber').text(originalNumber);
+      $('.resultNumber').text(result);
+      $('#result').show();
+      $('#error').hide();
+    }
+
+    event.preventDefault();
+  })
+})

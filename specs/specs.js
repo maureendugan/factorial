@@ -14,4 +14,7 @@ describe('factorial', function() {
   it('returns 120 for 5', function() {
     factorial(5).should.equal(120);
   });
+  it('returns 3628800 for 10', function() {
+    factorial(10).should.equal(3628800);
+  });
 });
